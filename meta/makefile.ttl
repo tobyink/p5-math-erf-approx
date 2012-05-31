@@ -1,0 +1,13 @@
+# This file provides instructions for packaging.
+
+@prefix : <http://purl.org/NET/cpan-uri/terms#> .
+
+<http://purl.org/NET/cpan-uri/dist/Math-Erf-Approx/project>
+	:perl_version_from _:main ;
+	:version_from _:main ;
+	:readme_from _:main ;
+	:requires "Sub::Exporter" ;
+	:test_requires "Test::More 0.61"  .
+
+_:main <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Math/Erf/Approx.pm" .
+
