@@ -146,6 +146,28 @@ It is possible to run a small test suite on this module using:
 
  use Math::Erf::Approx;
  Math::Erf::Approx->run_tests;
+ 
+=head1 BENCHMARKS
+
+Benchmarking against L<Games::Go::Erf> (on a fairly underpowered netbook)...
+
+ Benchmark: timing 100000 iterations of GGE, MEA...
+   GGE:  6 wallclock secs ( 6.34 usr +  0.01 sys =  6.35 CPU) @ 15748.03/s (n=100000)
+   MEA:  3 wallclock secs ( 2.71 usr +  0.00 sys =  2.71 CPU) @ 36900.37/s (n=100000)
+
+There are considerations other than raw speed though...
+
+=over
+
+=item * Games::Go::Erf provides much more accurate results
+
+=item * ... and it can calculate inverses
+
+=item * ... B<but> it has a dependency on L<Tk>
+
+=item * ... B<and> it sets C<< $[ >> to 1, which has been deprecated since Perl 5.12.
+
+=back
 
 =head1 SEE ALSO
 
@@ -172,14 +194,6 @@ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
 MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =begin trustme
-
-=item a1
-
-=item a2
-
-=item a3
-
-=item a4
 
 =item run_tests
 
