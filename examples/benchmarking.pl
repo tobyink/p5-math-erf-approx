@@ -11,7 +11,7 @@ BENCHMARK: {
 	});
 };
 
-print <DATA>;
+print <DATA>
 
 __DATA__
 
