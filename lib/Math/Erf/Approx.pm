@@ -10,7 +10,7 @@ use Test::More;
 BEGIN {
 	no warnings 'once';
 	$Math::Erf::Approx::AUTHORITY = 'cpan:TOBYINK';
-	$Math::Erf::Approx::VERSION   = '0.001';
+	$Math::Erf::Approx::VERSION   = '0.002';
 };
 
 sub erf
